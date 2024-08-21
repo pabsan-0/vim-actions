@@ -11,11 +11,13 @@ Common use cases include:
 
 ## Installation
 
-This plugin requires you to have fzf.vim first. Then install using vim-plug:
+This plugin requires you to have [fzf.vim](https://github.com/junegunn/fzf.vim) first.
+
+Install using vim-plug:
 
 ```
-Plug junnegun/fzf
-Plug junnegun/fzf.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug pabsan-0/vim-actions
 ```
 
@@ -30,17 +32,8 @@ The point of this plugin is speed, nonetheless you can also call it via the slow
 
 Your personal default list of actions can be defined in your `~/.vimrc` by setting the variable `g:actions_list`. The plugin default is as follows:
 
-```
-let g:actions_list = [
-    \ ["Source local rc       | :source .vimrc "],
-    \ ["Edit local rc         | :edit .vimrc   "],
-    \ ["                                       "],
-    \ [".gitconfig            | ~/.gitconfig   "],
-    \ [".vimrc                | ~/.vimrc       "],
-    \ ["                                       "],
-    \ ]
-```
-
+https://github.com/pabsan-0/vim-actions/blob/be959d1c19b96d1a045689af41ff32f6039e9df5/plugin/shortcuts.vim#L12-L19
+ 
 About action lists: 
 
 - Notice the usage of the `|` to separate action names and targets.
@@ -50,14 +43,13 @@ About action lists:
 
 ## Project-wise actions
 
-For project-specific actions, use a local `.vimrc` file at the root of your project that updates `g:actions_list`. For maximum convenience, your default action list should include an action to source this file. 
+For project-specific actions, use a local `.vimrc` file at the root of your project that updates `g:actions_list`.
 
-An extra custom mapping to handle this file is not recommended, since it only gives you more stuff to think about.
+For maximum convenience, your default action list should include an action to source this file. An extra custom mapping to handle this file is not recommended, since it only gives you more stuff to think about.
 
 Here's a few examples on how this file may look like.
 
-```
-```
+https://github.com/pabsan-0/vim-actions/blob/be959d1c19b96d1a045689af41ff32f6039e9df5/samples/.vimrc-extend#L4-L10
 
-```
-```
+https://github.com/pabsan-0/vim-actions/blob/be959d1c19b96d1a045689af41ff32f6039e9df5/samples/.vimrc-replace#L4-L7
+
