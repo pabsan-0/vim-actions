@@ -1,0 +1,10 @@
+" Project-wise .vimrc
+" Action list extend example
+
+if exists('g:actions_list')
+    let g:actions_list_local = [
+        \ ["home | ~"],
+        \ ["root | /"],
+        \ ]
+    call extend(g:actions_list, filter(g:actions_list_local, 'index(g:actions_list, v:val) == -1'))
+endif

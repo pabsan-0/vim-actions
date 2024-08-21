@@ -1,0 +1,8 @@
+" Project-wise .vimrc
+" Action list replace example
+
+let g:actions_list = [
+    \ ["home | ~"],
+    \ ["root | /"],
+    \ ]
+
