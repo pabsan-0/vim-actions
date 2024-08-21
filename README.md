@@ -8,17 +8,18 @@ Offshore cognitive effort into a persistent, project-specific list of repeating 
 - Execute arbitrary vim commands (including shell commands)
 - Update and source an action list tailored to your current project
 
+<img src="https://github.com/user-attachments/assets/42025dfa-795d-47f6-8128-464d21e3afed" width="600"/>
 
 ## Installation
 
 This plugin requires you to have [fzf.vim](https://github.com/junegunn/fzf.vim) first.
 
-Install using vim-plug:
+Using vim-plug:
 
 ```
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug pabsan-0/vim-actions
+Plug 'pabsan-0/vim-actions'
 ```
 
 ## Usage 
