@@ -1,7 +1,7 @@
 let g:actions_echom_prefix = '[actions.vim] '
 
 " Check that fzf.vim is installed
-if match(&runtimepath, 'fzf.vim') != -1
+if match(&runtimepath, 'fzf.vim') == -1
     echom g:actions_echom_prefix . "fzf.vim not found! Loading anyway, do expect issues." 
 endif
 
