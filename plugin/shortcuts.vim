@@ -62,6 +62,22 @@ function! ActionsFZFHandle(selected)
     endif
 endfunction
 
+
+" Quickly populate local rcfiles with actions lists
+function! ActionsTemplateExtend()
+    let s:plugin_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+    execute 'read ' . fnameescape(s:plugin_path . '/samples/.vimrc-extend')
+endfunction
+command! ActionsTemplateExtend call ActionsTemplateExtend()
+
+
+function! ActionsTemplateReplace()
+    let s:plugin_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+    execute 'read ' . fnameescape(s:plugin_path . '/samples/.vimrc-replace')
+endfunction
+command! ActionsTemplateReplace call ActionsTemplateReplace()
+
+
 " Key mapping to invoke the Action command, only if not being used
 if mapcheck("<leader>q", "I") == "" 
     nnoremap <leader>q :Actions <CR>
